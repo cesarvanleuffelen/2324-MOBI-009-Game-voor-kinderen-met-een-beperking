@@ -10,3 +10,7 @@ The game we are going to make is based on 'cookie-clicker'(https://orteil.dashne
 ## Tech Stack
 - Godot engine
 - WebGL
+
+## Important Links
+- trello -- (https://trello.com/b/dG5hslnJ/modem-spel-voor-kinderen-met-een-beperking)
+- Figma -- (https://www.figma.com/file/7drJsDmSQoWCn0zjyX5P3W/2324-MOBI-09-Game?type=design&mode=design&t=6kaufoS0JaMn0Co0-1)
