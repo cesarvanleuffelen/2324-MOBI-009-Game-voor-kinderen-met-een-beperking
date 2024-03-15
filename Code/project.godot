@@ -13,13 +13,13 @@ config_version=5
 config/name="Game"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-
-
 Global="*res://global.gd"
-
-
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [rendering]
 
