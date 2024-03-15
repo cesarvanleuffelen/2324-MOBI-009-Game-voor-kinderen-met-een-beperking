@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh4fabto4ymp8"]
+[gd_scene load_steps=5 format=3 uid="uid://bh4fabto4ymp8"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_b5fom"]
-[ext_resource type="Texture2D" uid="uid://d3d8hmfbhd2s7" path="res://planten/fase_1.png" id="1_oot4c"]
+[ext_resource type="Texture2D" uid="uid://d3d8hmfbhd2s7" path="res://planten/part1/fase_1.png" id="1_oot4c"]
 [ext_resource type="Script" path="res://clicker.gd" id="3_ha160"]
-[ext_resource type="Script" path="res://Next.gd" id="3_lytd4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1box"]
 bg_color = Color(1, 1, 1, 1)
@@ -22,8 +21,8 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
 
 [node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Panel"]
-position = Vector2(173, 334)
-scale = Vector2(0.276033, 0.275465)
+position = Vector2(558, 297)
+scale = Vector2(0.116033, 0.115794)
 texture = ExtResource("1_oot4c")
 script = ExtResource("3_ha160")
 
@@ -49,12 +48,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="NextButton" type="Button" parent="CanvasLayer/Panel/Plant_1"]
 visible = false
-offset_left = 1116.0
-offset_top = 472.0
-offset_right = 1254.0
-offset_bottom = 617.0
+offset_left = -2688.89
+offset_top = 1891.29
+offset_right = -2550.89
+offset_bottom = 2036.29
 theme_override_font_sizes/font_size = 100
 text = "+"
-script = ExtResource("3_lytd4")
 
 [connection signal="pressed" from="CanvasLayer/Panel/Plant_1/NextButton" to="." method="_on_next_button_pressed"]

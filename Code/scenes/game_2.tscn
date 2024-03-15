@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3w76petqol61"]
+[gd_scene load_steps=6 format=3 uid="uid://brgoikhng3vd8"]
 
-[ext_resource type="Texture2D" uid="uid://b3be2kb5m28li" path="res://planten/fase_5.png" id="1_loy7v"]
-[ext_resource type="Texture2D" uid="uid://d3d8hmfbhd2s7" path="res://planten/fase_1.png" id="2_7kljp"]
-[ext_resource type="Script" path="res://Next.gd" id="3_2muk6"]
-[ext_resource type="Script" path="res://clicker.gd" id="3_g75sc"]
+[ext_resource type="Script" path="res://Level.gd" id="1_ev4ue"]
+[ext_resource type="Texture2D" uid="uid://b3be2kb5m28li" path="res://planten/part1/fase_5.png" id="1_nwhac"]
+[ext_resource type="Texture2D" uid="uid://w5i07bumbey2" path="res://planten/part2/fase_1.png" id="2_u0mdd"]
+[ext_resource type="Script" path="res://clicker.gd" id="3_13rde"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1box"]
 bg_color = Color(1, 1, 1, 1)
 
 [node name="Level_1" type="Node2D"]
+script = ExtResource("1_ev4ue")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -21,9 +22,9 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
 
 [node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Panel"]
-position = Vector2(173, 334)
-scale = Vector2(0.276033, 0.275465)
-texture = ExtResource("1_loy7v")
+position = Vector2(558, 297)
+scale = Vector2(0.116033, 0.115794)
+texture = ExtResource("1_nwhac")
 
 [node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_1"]
 modulate = Color(0, 0, 0, 1)
@@ -32,16 +33,16 @@ offset_top = 861.295
 offset_right = 347.887
 offset_bottom = 1026.3
 theme_override_font_sizes/font_size = 120
-text = "Done!"
+text = "Klaar!"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Panel"]
-position = Vector2(477, 334)
-scale = Vector2(0.276033, 0.275465)
-texture = ExtResource("2_7kljp")
-script = ExtResource("3_g75sc")
+position = Vector2(294, 411)
+scale = Vector2(0.116033, 0.115794)
+texture = ExtResource("2_u0mdd")
+script = ExtResource("3_13rde")
 
 [node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_2"]
 offset_left = -574.197
@@ -65,10 +66,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="NextButton" type="Button" parent="CanvasLayer/Panel/Plant_2"]
 visible = false
-offset_left = 1116.0
-offset_top = 472.0
-offset_right = 1254.0
-offset_bottom = 617.0
+offset_left = -94.8002
+offset_top = -2133.1
+offset_right = 43.1998
+offset_bottom = -1988.1
 theme_override_font_sizes/font_size = 100
 text = "+"
-script = ExtResource("3_2muk6")
+
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_2/NextButton" to="." method="_on_next_button_pressed"]

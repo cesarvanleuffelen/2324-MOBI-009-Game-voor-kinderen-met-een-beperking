@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjvwcgg3kxcsk"
-path="res://.godot/imported/fase_4.png-ca74349bee6c3fd4040417f56ee54419.ctex"
+uid="uid://cherywvxwk05a"
+path="res://.godot/imported/fase_3.png-e997bb9c53a61b504ff4183ec8775ae4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://planten/fase_4.png"
-dest_files=["res://.godot/imported/fase_4.png-ca74349bee6c3fd4040417f56ee54419.ctex"]
+source_file="res://planten/part3/fase_3.png"
+dest_files=["res://.godot/imported/fase_3.png-e997bb9c53a61b504ff4183ec8775ae4.ctex"]
 
 [params]
 
