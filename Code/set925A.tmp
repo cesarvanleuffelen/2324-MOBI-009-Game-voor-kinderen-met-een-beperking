@@ -1,0 +1,197 @@
+[gd_scene load_steps=13 format=3 uid="uid://v10cjbi26bri"]
+
+[ext_resource type="Script" path="res://settings_menu.gd" id="1_2kbha"]
+[ext_resource type="Texture2D" uid="uid://3vk7uhs7ehg7" path="res://game achtergrond.png" id="2_ntsjv"]
+[ext_resource type="Theme" uid="uid://c1byp8qt5rxne" path="res://knoplayout.tres" id="3_4qc1f"]
+[ext_resource type="FontFile" uid="uid://dg6oju3dlhjlo" path="res://Kadwa-Bold.ttf" id="4_xivv3"]
+[ext_resource type="Script" path="res://Master.gd" id="5_cp2ft"]
+[ext_resource type="Script" path="res://MusicCheckBox.gd" id="5_rm0b6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e07p7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.270588, 0.396078, 0.282353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_kx5xt"]
+
+[sub_resource type="Theme" id="Theme_eio6f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsinm"]
+bg_color = Color(0.270588, 0.396078, 0.282353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl86t"]
+bg_color = Color(0.270588, 0.396078, 0.282353, 1)
+
+[sub_resource type="Theme" id="Theme_q51hn"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_qsinm")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_sl86t")
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2kbha")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.1249, 1.08)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_ntsjv")
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 177.0
+offset_right = 870.0
+offset_bottom = 472.0
+
+[node name="Panel" type="Panel" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e07p7")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 382.0
+offset_right = 719.0
+offset_bottom = 539.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="CartoonMode" type="CheckButton" parent="MarginContainer3/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_kx5xt")
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_pressed_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_hover_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_focus_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_disabled_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_outline_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Use cartoon Mode"
+
+[node name="DisableMusic" type="CheckButton" parent="MarginContainer3/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_pressed_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_hover_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_focus_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_disabled_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_colors/font_outline_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Disable Music"
+
+[node name="Volume" type="Button" parent="MarginContainer3/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Volume"
+
+[node name="Back" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_4qc1f")
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Back"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 187.0
+offset_right = 656.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+theme_override_font_sizes/font_size = 35
+text = "Settings
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 412.0
+offset_top = 296.0
+offset_right = 436.0
+offset_bottom = 320.0
+
+[node name="ModeCheckBox" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_eio6f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="HBoxContainer/ModeCheckBox"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -3.0
+offset_right = 175.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Disable Music"
+
+[node name="MusicCheckBox" type="CheckBox" parent="HBoxContainer/ModeCheckBox"]
+layout_mode = 2
+offset_top = -22.0
+offset_right = 24.0
+offset_bottom = 2.0
+script = ExtResource("5_rm0b6")
+
+[node name="Label" type="Label" parent="HBoxContainer/ModeCheckBox/MusicCheckBox"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -4.0
+offset_right = 175.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Use Cartoon Mode"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 416.0
+offset_top = 330.0
+offset_right = 532.0
+offset_bottom = 364.0
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Volume
+"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 504.0
+offset_top = 338.0
+offset_right = 718.0
+offset_bottom = 369.0
+
+[node name="music" type="HSlider" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_q51hn")
+max_value = 1.0
+step = 0.001
+script = ExtResource("5_cp2ft")
+bus_name = "music"
+
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Back" to="." method="_on_back_pressed"]

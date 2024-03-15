@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cghuxus6dx565"]
 
 [ext_resource type="Script" path="res://Main Menu.gd" id="1_g0onp"]
-[ext_resource type="Theme" uid="uid://dte0vp6u0qo8g" path="res://greenbutton.tres" id="2_pdsfs"]
+[ext_resource type="Theme" uid="uid://c1byp8qt5rxne" path="res://knoplayout.tres" id="3_nu4df"]
 [ext_resource type="Texture2D" uid="uid://3vk7uhs7ehg7" path="res://game achtergrond.png" id="3_s4dq2"]
 [ext_resource type="FontFile" uid="uid://dg6oju3dlhjlo" path="res://Kadwa-Bold.ttf" id="4_i7rl3"]
 
@@ -14,19 +14,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g0onp")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 2
-offset_right = 75.0
-offset_bottom = 63.0
-scale = Vector2(15.3499, 10.2841)
-color = Color(0.313726, 0.466667, 0.176471, 1)
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(1.12888, 1.09397)
+offset_right = 1024.0
+offset_bottom = 600.0
+scale = Vector2(1.12465, 1.08083)
 texture = ExtResource("3_s4dq2")
 stretch_mode = 6
 
@@ -54,14 +46,14 @@ theme_override_constants/separation = 10
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_pdsfs")
+theme = ExtResource("3_nu4df")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_i7rl3")
 text = "PLAY"
 
 [node name="Setting" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_pdsfs")
+theme = ExtResource("3_nu4df")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_i7rl3")
 text = "SETTINGS"
