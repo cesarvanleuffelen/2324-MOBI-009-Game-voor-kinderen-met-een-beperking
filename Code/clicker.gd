@@ -2,11 +2,10 @@ extends Sprite2D
 
 # variables for clicks and total
 var clickCount: float = 0.0
-var totalClick: float = 10.0
 
 #function to convert click amount to percentage
 func toPercent(clicks: float) -> float:
-	return (clicks / totalClick) * 100.0
+	return (clicks / Global.totalClick) * 100.0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,16 +14,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# change sprite texture based on amount clicked
-	match toPercent(clickCount):
-		10.0:
-			self.texture = ResourceLoader.load("res://planten/fase_2.png")
-		30.0:
-			self.texture = ResourceLoader.load("res://planten/fase_3.png")
-		60.0:
-			self.texture = ResourceLoader.load("res://planten/fase_4.png")
-		100.0:
-			self.texture = ResourceLoader.load("res://planten/fase_5.png")
+	if toPercent(clickCount) >= 10.0 && toPercent(clickCount) <= 30.0:
+		self.texture = ResourceLoader.load("res://planten/part" + str(Global.scene_count) + "/fase_2.png")
+	elif toPercent(clickCount) >= 30.0 && toPercent(clickCount) <= 60.0:
+		self.texture = ResourceLoader.load("res://planten/part" + str(Global.scene_count) + "/fase_3.png")
+	elif toPercent(clickCount) >= 60.0 && toPercent(clickCount) < 100.0:
+		self.texture = ResourceLoader.load("res://planten/part" + str(Global.scene_count) + "/fase_4.png")
+	elif toPercent(clickCount) >= 100.0:
+		self.texture = ResourceLoader.load("res://planten/part" + str(Global.scene_count) + "/fase_5.png")
+	# check if you have completed the game
+	if Global.scene_count >= 5 && clickCount == Global.totalClick:
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 
 func _input(event):
 	#check for right mouse click event
@@ -33,10 +33,10 @@ func _input(event):
 				# add 1 to clickCount & change progress bar
 				clickCount += 1.0
 				$plant_bar.value = toPercent(clickCount)
-				print("click count:", clickCount)
+				print(toPercent(clickCount))
 				# check if the plant is fully grown
-				if clickCount >= totalClick:
+				if clickCount >= Global.totalClick:
 					$plant_bar.visible = false
-					$Plant_Label.text = "done"
+					$Plant_Label.text = "Klaar!"
 					$NextButton.visible = true
 					

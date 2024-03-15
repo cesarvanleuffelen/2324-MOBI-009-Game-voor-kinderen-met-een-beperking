@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://btlnbupr0aktl"]
+
+[ext_resource type="Texture2D" uid="uid://b3be2kb5m28li" path="res://planten/part1/fase_5.png" id="1_6x8ve"]
+[ext_resource type="Script" path="res://Level.gd" id="1_q0nl0"]
+[ext_resource type="Texture2D" uid="uid://cawnn170ujyql" path="res://planten/part2/fase_5.png" id="3_cexth"]
+[ext_resource type="Script" path="res://clicker.gd" id="3_rou3e"]
+[ext_resource type="Texture2D" uid="uid://hx6y5y04ga6g" path="res://planten/part3/fase_1.png" id="4_640rn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1box"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_q0nl0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
+
+[node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(558, 297)
+scale = Vector2(0.116033, 0.115794)
+texture = ExtResource("1_6x8ve")
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_1"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.295
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+text = "Klaar!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(294, 411)
+scale = Vector2(0.116033, 0.115794)
+texture = ExtResource("3_cexth")
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.295
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+text = "Klaar!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_3" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(294, 107)
+scale = Vector2(0.116033, 0.115794)
+texture = ExtResource("4_640rn")
+script = ExtResource("3_rou3e")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_3"]
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.295
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NextButton" type="Button" parent="CanvasLayer/Panel/Plant_3"]
+offset_left = 4395.3
+offset_top = 3117.6
+offset_right = 4533.3
+offset_bottom = 3262.6
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_3/NextButton" to="." method="_on_next_button_pressed"]
