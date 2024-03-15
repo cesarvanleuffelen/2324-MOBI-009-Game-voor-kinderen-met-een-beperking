@@ -28,7 +28,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.12888, 1.09397)
 texture = ExtResource("3_s4dq2")
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

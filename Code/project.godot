@@ -14,11 +14,9 @@ config/name="Game"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
-[autoload]
 
 Global="*res://global.gd"
 
-[display]
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
