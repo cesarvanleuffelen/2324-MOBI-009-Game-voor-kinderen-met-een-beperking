@@ -118,18 +118,18 @@ text = "Volume"
 layout_mode = 2
 theme = ExtResource("3_4qc1f")
 theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Back"
+text = "Terug"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 510.0
+offset_left = 472.0
 offset_top = 191.0
-offset_right = 656.0
+offset_right = 687.0
 offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
 theme_override_font_sizes/font_size = 35
-text = "Settings
+text = "Instellingen
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -152,7 +152,7 @@ offset_right = 174.0
 offset_bottom = 55.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Disable Music"
+text = "Muziek uitzetten"
 
 [node name="MusicChecBox" type="CheckBox" parent="HBoxContainer/ModeCheckBox"]
 layout_mode = 2
@@ -170,7 +170,7 @@ offset_right = 174.0
 offset_bottom = 9.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Use Cartoon Mode"
+text = "Achtergrond uitzetten"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2

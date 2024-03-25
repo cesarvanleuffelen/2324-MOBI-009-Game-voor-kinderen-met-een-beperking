@@ -20,9 +20,6 @@ window/stretch/aspect="expand"
 [autoload]
 
 Global="*res://global.gd"
-
-[autoload]
-
 BgMusic="*res://bg_music.tscn"
 
 [display]
