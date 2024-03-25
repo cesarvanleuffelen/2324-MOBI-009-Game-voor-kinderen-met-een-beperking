@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh4fabto4ymp8"]
+[gd_scene load_steps=9 format=3 uid="uid://bh4fabto4ymp8"]
 
-[ext_resource type="Script" path="res://Level.gd" id="1_b5fom"]
+[ext_resource type="Script" path="res://scenes/LevelController.gd" id="1_ikhc5"]
 [ext_resource type="Texture2D" uid="uid://d3d8hmfbhd2s7" path="res://planten/part1/fase_1.png" id="1_oot4c"]
-[ext_resource type="Script" path="res://clicker.gd" id="3_ha160"]
+[ext_resource type="Script" path="res://scenes/plant1.gd" id="3_spp07"]
+[ext_resource type="Script" path="res://scenes/plant2.gd" id="4_68xnf"]
+[ext_resource type="Script" path="res://scenes/plant3.gd" id="5_iu626"]
+[ext_resource type="Script" path="res://scenes/plant4.gd" id="6_eqga4"]
+[ext_resource type="Script" path="res://scenes/plant5.gd" id="7_uk8be"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1box"]
 bg_color = Color(1, 1, 1, 1)
 
 [node name="Level_1" type="Node2D"]
-script = ExtResource("1_b5fom")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -19,12 +22,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
+script = ExtResource("1_ikhc5")
 
 [node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Panel"]
 position = Vector2(558, 297)
 scale = Vector2(0.116033, 0.115794)
 texture = ExtResource("1_oot4c")
-script = ExtResource("3_ha160")
+script = ExtResource("3_spp07")
 
 [node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_1"]
 offset_left = -574.197
@@ -46,13 +50,151 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="NextButton" type="Button" parent="CanvasLayer/Panel/Plant_1"]
+[node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(414, 297)
+scale = Vector2(0.116033, 0.115794)
+script = ExtResource("4_68xnf")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_2"]
 visible = false
-offset_left = -2688.89
-offset_top = 1891.29
-offset_right = -2550.89
-offset_bottom = 2036.29
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_2"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.295
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton2" type="Button" parent="CanvasLayer/Panel/Plant_2"]
+visible = false
+offset_left = -43.0913
+offset_top = 466.345
+offset_right = 103.909
+offset_bottom = 611.345
 theme_override_font_sizes/font_size = 100
 text = "+"
 
-[connection signal="pressed" from="CanvasLayer/Panel/Plant_1/NextButton" to="." method="_on_next_button_pressed"]
+[node name="Plant_3" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(702, 297)
+scale = Vector2(0.116033, 0.115794)
+script = ExtResource("5_iu626")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_3"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_3"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.294
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton3" type="Button" parent="CanvasLayer/Panel/Plant_3"]
+visible = false
+offset_left = -43.0923
+offset_top = 466.345
+offset_right = 103.908
+offset_bottom = 611.345
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_4" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(846, 297)
+scale = Vector2(0.116033, 0.115794)
+script = ExtResource("6_eqga4")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_4"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_4"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.294
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton4" type="Button" parent="CanvasLayer/Panel/Plant_4"]
+visible = false
+offset_left = -43.0923
+offset_top = 466.345
+offset_right = 103.908
+offset_bottom = 611.345
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_5" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(270, 297)
+scale = Vector2(0.116033, 0.115794)
+script = ExtResource("7_uk8be")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_5"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant_Label" type="Label" parent="CanvasLayer/Panel/Plant_5"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.113
+offset_top = 861.294
+offset_right = 347.887
+offset_bottom = 1026.3
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton5" type="Button" parent="CanvasLayer/Panel/Plant_5"]
+visible = false
+offset_left = -43.0923
+offset_top = 466.345
+offset_right = 103.908
+offset_bottom = 611.345
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_2/newButton2" to="CanvasLayer/Panel" method="_on_new_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_3/newButton3" to="CanvasLayer/Panel" method="_on_new_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_4/newButton4" to="CanvasLayer/Panel" method="_on_new_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Plant_5/newButton5" to="CanvasLayer/Panel" method="_on_new_button_5_pressed"]
