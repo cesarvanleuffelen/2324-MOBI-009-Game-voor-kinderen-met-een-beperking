@@ -1,5 +1,4 @@
 extends Sprite2D
-
 # variables for clicks and total
 var clickCount: float = 0.0
 
@@ -15,13 +14,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if toPercent(clickCount) >= 10.0 && toPercent(clickCount) <= 30.0:
-		self.texture = ResourceLoader.load("res://planten/part" + str(Global.part) + "/fase_2.png")
+		self.texture = ResourceLoader.load("res://planten/part3/fase_2.png")
 	elif toPercent(clickCount) >= 30.0 && toPercent(clickCount) <= 60.0:
-		self.texture = ResourceLoader.load("res://planten/part" + str(Global.part) + "/fase_3.png")
+		self.texture = ResourceLoader.load("res://planten/part3/fase_3.png")
 	elif toPercent(clickCount) >= 60.0 && toPercent(clickCount) < 100.0:
-		self.texture = ResourceLoader.load("res://planten/part" + str(Global.part) + "/fase_4.png")
+		self.texture = ResourceLoader.load("res://planten/part3/fase_4.png")
 	elif toPercent(clickCount) >= 100.0:
-		self.texture = ResourceLoader.load("res://planten/part" + str(Global.part) + "/fase_5.png")
+		self.texture = ResourceLoader.load("res://planten/part3/fase_5.png")
 
 func _input(event):
 	#check for right mouse click event
@@ -34,6 +33,7 @@ func _input(event):
 				# check if the plant is fully grown
 				if clickCount >= Global.totalClick:
 					$plant_bar.visible = false
+					$Plant_Label.visible = true
 					$Plant_Label.text = "Klaar!"
 					Global.done = true
-					
+					clickCount = 200.0

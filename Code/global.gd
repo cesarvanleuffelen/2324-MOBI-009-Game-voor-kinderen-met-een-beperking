@@ -1,4 +1,5 @@
 extends Node
 
-var scene_count: int = 1;
-var totalClick: float = 10.0
+var totalClick: float = 5.0
+var done:bool = false
+var part: int = 1
