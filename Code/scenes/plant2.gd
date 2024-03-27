@@ -13,6 +13,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Global.part == 2:
+		if Input.is_action_just_pressed("ui_select"):
+			clickCount += 1
+			$plant_bar.value = toPercent(clickCount)
+			if clickCount >= Global.totalClick:
+						$plant_bar.visible = false
+						$Plant_Label.visible = true
+						$Plant_Label.text = "Klaar!"
+						Global.spaceDone = true
+						clickCount = 200.0
+					
 	if toPercent(clickCount) >= 10.0 && toPercent(clickCount) <= 30.0:
 		self.texture = ResourceLoader.load("res://planten/part2/fase_2.png")
 	elif toPercent(clickCount) >= 30.0 && toPercent(clickCount) <= 60.0:
