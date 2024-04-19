@@ -19,8 +19,7 @@ func _process(delta):
 			$plant_bar.value = toPercent(clickCount)
 			if clickCount >= Global.totalClick:
 						$plant_bar.visible = false
-						$Plant_Label.visible = true
-						$Plant_Label.text = "Klaar!"
+						Global.spaceCount += 1
 						Global.spaceDone = true
 						clickCount = 200.0
 					
@@ -44,7 +43,6 @@ func _input(event):
 				# check if the plant is fully grown
 				if clickCount >= Global.totalClick:
 					$plant_bar.visible = false
-					$Plant_Label.visible = true
-					$Plant_Label.text = "Klaar!"
+					Global.spaceCount += 1
 					Global.done = true
 					clickCount = 200.0
