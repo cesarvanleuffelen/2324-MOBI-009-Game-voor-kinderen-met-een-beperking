@@ -4,4 +4,6 @@ var totalClick: float = 5.0
 var done:bool = false
 var part: int = 1
 var spaceDone: bool = false
-var spaceCount: int = 2
+var spaceCount: int = 1
+var background: bool = true
+var finish: bool = false

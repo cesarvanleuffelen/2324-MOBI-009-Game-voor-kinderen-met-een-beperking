@@ -19,10 +19,11 @@ func _process(delta):
 			$plant_bar.value = toPercent(clickCount)
 			if clickCount >= Global.totalClick:
 						$plant_bar.visible = false
-						$Plant_Label.visible = true
-						$Plant_Label.text = "Klaar!"
 						Global.spaceDone = true
 						clickCount = 200.0
+						Global.spaceCount += 1
+						print(Global.spaceCount)
+						
 	if toPercent(clickCount) >= 10.0 && toPercent(clickCount) <= 30.0:
 		self.texture = ResourceLoader.load("res://planten/part4/fase_2.png")
 	elif toPercent(clickCount) >= 30.0 && toPercent(clickCount) <= 60.0:
@@ -43,7 +44,7 @@ func _input(event):
 				# check if the plant is fully grown
 				if clickCount >= Global.totalClick:
 					$plant_bar.visible = false
-					$Plant_Label.visible = true
-					$Plant_Label.text = "Klaar!"
 					Global.done = true
+					Global.spaceCount += 1
 					clickCount = 200.0
+					print(Global.spaceCount)

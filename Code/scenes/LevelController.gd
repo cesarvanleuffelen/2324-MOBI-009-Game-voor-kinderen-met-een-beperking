@@ -7,7 +7,8 @@ var b5:bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if !Global.background:
+		$TextureRect.visible = false
 	
 
 
@@ -33,12 +34,16 @@ func _process(delta):
 			$Plant_4/newButton4.visible = true
 		if b5:
 			$Plant_5/newButton5.visible = true
+			
+	if Global.spaceCount > 5 :
+		$ColorRect.visible = true
+		await get_tree().create_timer(5).timeout
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
 func _on_new_button_2_pressed():
 	Global.done = false
 	Global.part = 2
-	Global.spaceCount += 1
 	$Plant_2/newButton2.visible = false
 	$Plant_3/newButton3.visible = false
 	$Plant_4/newButton4.visible = false
@@ -53,7 +58,6 @@ func _on_new_button_2_pressed():
 func _on_new_button_3_pressed():
 	Global.done = false
 	Global.part = 3
-	Global.spaceCount += 1
 	$Plant_2/newButton2.visible = false
 	$Plant_3/newButton3.visible = false
 	$Plant_4/newButton4.visible = false
@@ -68,7 +72,6 @@ func _on_new_button_3_pressed():
 func _on_new_button_4_pressed():
 	Global.done = false
 	Global.part = 4
-	Global.spaceCount += 1
 	$Plant_2/newButton2.visible = false
 	$Plant_3/newButton3.visible = false
 	$Plant_4/newButton4.visible = false
@@ -83,7 +86,6 @@ func _on_new_button_4_pressed():
 func _on_new_button_5_pressed():
 	Global.done = false
 	Global.part = 5
-	Global.spaceCount += 1
 	$Plant_2/newButton2.visible = false
 	$Plant_3/newButton3.visible = false
 	$Plant_4/newButton4.visible = false

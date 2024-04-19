@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://v10cjbi26bri"]
+[gd_scene load_steps=17 format=3 uid="uid://v10cjbi26bri"]
 
 [ext_resource type="Script" path="res://settings_menu.gd" id="1_2kbha"]
 [ext_resource type="Texture2D" uid="uid://3vk7uhs7ehg7" path="res://game achtergrond.png" id="2_ntsjv"]
 [ext_resource type="Theme" uid="uid://c1byp8qt5rxne" path="res://knoplayout.tres" id="3_4qc1f"]
 [ext_resource type="FontFile" uid="uid://dg6oju3dlhjlo" path="res://Kadwa-Bold.ttf" id="4_xivv3"]
+[ext_resource type="Script" path="res://ModeCheckBox.gd" id="5_84u6p"]
 [ext_resource type="Script" path="res://Master.gd" id="5_cp2ft"]
 [ext_resource type="Script" path="res://MusicCheckBox.gd" id="5_rm0b6"]
 [ext_resource type="Texture2D" uid="uid://ks0scfvouhyf" path="res://normalslider.png" id="6_2oho3"]
@@ -143,6 +144,25 @@ offset_bottom = 295.0
 layout_mode = 2
 theme = SubResource("Theme_eio6f")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+script = ExtResource("5_84u6p")
+
+[node name="Label2" type="Label" parent="HBoxContainer/ModeCheckBox"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -1.0
+offset_right = 211.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
+theme_override_fonts/font = ExtResource("4_xivv3")
+text = "Achtergrond uitzetten"
+
+[node name="MusicChecBox" type="CheckBox" parent="HBoxContainer/ModeCheckBox"]
+layout_mode = 2
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 48.0
+theme = SubResource("Theme_n82f8")
+script = ExtResource("5_rm0b6")
 
 [node name="Label" type="Label" parent="HBoxContainer/ModeCheckBox"]
 layout_mode = 0
@@ -153,24 +173,6 @@ offset_bottom = 55.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
 text = "Muziek uitzetten"
-
-[node name="MusicChecBox" type="CheckBox" parent="HBoxContainer/ModeCheckBox"]
-layout_mode = 2
-offset_top = 24.0
-offset_right = 24.0
-offset_bottom = 48.0
-theme = SubResource("Theme_n82f8")
-script = ExtResource("5_rm0b6")
-
-[node name="Label" type="Label" parent="HBoxContainer/ModeCheckBox/MusicChecBox"]
-layout_mode = 0
-offset_left = 29.0
-offset_top = -25.0
-offset_right = 174.0
-offset_bottom = 9.0
-theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
-theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Achtergrond uitzetten"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -199,8 +201,10 @@ size_flags_horizontal = 3
 theme = SubResource("Theme_q51hn")
 max_value = 1.0
 step = 0.001
+value = 0.3
 script = ExtResource("5_cp2ft")
 bus_name = "music"
 
 [connection signal="pressed" from="MarginContainer3/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="HBoxContainer/ModeCheckBox" to="HBoxContainer/ModeCheckBox" method="_on_toggled"]
 [connection signal="toggled" from="HBoxContainer/ModeCheckBox/MusicChecBox" to="HBoxContainer/ModeCheckBox/MusicChecBox" method="_on_toggled"]
