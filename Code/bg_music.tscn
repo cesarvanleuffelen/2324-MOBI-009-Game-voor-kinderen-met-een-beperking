@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://g5iortduwt3t"]
 
-[ext_resource type="AudioStream" uid="uid://dlrlvdlwappyc" path="res://Elevator Music.mp3" id="1_cn3gc"]
+[ext_resource type="AudioStream" uid="uid://d1dhv2o3lbomw" path="res://growmore background music.mp3" id="1_6iofg"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_cn3gc")
+stream = ExtResource("1_6iofg")
 autoplay = true
 bus = &"music"
