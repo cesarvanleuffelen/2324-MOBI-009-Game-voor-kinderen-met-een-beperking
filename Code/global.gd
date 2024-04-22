@@ -6,4 +6,3 @@ var part: int = 1
 var spaceDone: bool = false
 var spaceCount: int = 1
 var background: bool = true
-var finish: bool = false

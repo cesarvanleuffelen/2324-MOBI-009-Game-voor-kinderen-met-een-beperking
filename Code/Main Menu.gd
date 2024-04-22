@@ -13,4 +13,4 @@ func _on_play_pressed():
 
 
 func _on_setting_pressed():
-	get_tree().change_scene_to_file("res://settings_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/settings_menu.tscn")

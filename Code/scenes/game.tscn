@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh4fabto4ymp8"]
+[gd_scene load_steps=12 format=3 uid="uid://bh4fabto4ymp8"]
 
-[ext_resource type="Texture2D" uid="uid://pdb0kpl2hpd2" path="res://spel achtergrond.png" id="1_27g3s"]
+[ext_resource type="Texture2D" uid="uid://dmibg5akxdhgh" path="res://spel achtergrond.png" id="1_27g3s"]
 [ext_resource type="Script" path="res://scenes/LevelController.gd" id="1_ikhc5"]
 [ext_resource type="Texture2D" uid="uid://d3d8hmfbhd2s7" path="res://planten/part1/fase_1.png" id="1_oot4c"]
 [ext_resource type="Script" path="res://scenes/plant1.gd" id="3_spp07"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scenes/plant4.gd" id="6_eqga4"]
 [ext_resource type="Theme" uid="uid://dte0vp6u0qo8g" path="res://greenbutton.tres" id="6_uaiw7"]
 [ext_resource type="Script" path="res://scenes/plant5.gd" id="7_uk8be"]
+[ext_resource type="Script" path="res://scenes/Menu.gd" id="10_b3qhe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1box"]
 bg_color = Color(1, 1, 1, 0)
@@ -17,7 +18,27 @@ bg_color = Color(1, 1, 1, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Menu" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
+script = ExtResource("10_b3qhe")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_27g3s")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Menu"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,19 +47,13 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
 script = ExtResource("1_ikhc5")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 647.0
-texture = ExtResource("1_27g3s")
-
-[node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Panel"]
+[node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
 position = Vector2(575, 304)
 scale = Vector2(0.169905, 0.169555)
 texture = ExtResource("1_oot4c")
 script = ExtResource("3_spp07")
 
-[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_1"]
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_1"]
 offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
@@ -47,12 +62,12 @@ theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Panel"]
+[node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
 position = Vector2(241, 354)
 scale = Vector2(0.112962, 0.112729)
 script = ExtResource("4_68xnf")
 
-[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_2"]
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_2"]
 visible = false
 offset_left = -574.197
 offset_top = 881.803
@@ -62,22 +77,22 @@ theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="newButton2" type="Button" parent="CanvasLayer/Panel/Plant_2"]
+[node name="newButton2" type="Button" parent="CanvasLayer/Menu/Panel/Plant_2"]
 visible = false
 offset_left = -97.3779
 offset_top = 461.283
 offset_right = 140.622
 offset_bottom = 695.283
 theme = ExtResource("6_uaiw7")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 150
 text = "+"
 
-[node name="Plant_3" type="Sprite2D" parent="CanvasLayer/Panel"]
+[node name="Plant_3" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
 position = Vector2(934.008, 137.099)
 scale = Vector2(0.156017, 0.155695)
 script = ExtResource("5_iu626")
 
-[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_3"]
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_3"]
 visible = false
 offset_left = -574.197
 offset_top = 881.803
@@ -87,7 +102,7 @@ theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="newButton3" type="Button" parent="CanvasLayer/Panel/Plant_3"]
+[node name="newButton3" type="Button" parent="CanvasLayer/Menu/Panel/Plant_3"]
 visible = false
 offset_left = -43.0923
 offset_top = 466.345
@@ -97,12 +112,12 @@ theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
 
-[node name="Plant_4" type="Sprite2D" parent="CanvasLayer/Panel"]
+[node name="Plant_4" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
 position = Vector2(1067, 312)
 scale = Vector2(0.166016, 0.165675)
 script = ExtResource("6_eqga4")
 
-[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_4"]
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_4"]
 visible = false
 offset_left = -574.197
 offset_top = 881.803
@@ -112,7 +127,7 @@ theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="newButton4" type="Button" parent="CanvasLayer/Panel/Plant_4"]
+[node name="newButton4" type="Button" parent="CanvasLayer/Menu/Panel/Plant_4"]
 visible = false
 offset_left = -43.0923
 offset_top = 466.345
@@ -122,12 +137,12 @@ theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
 
-[node name="Plant_5" type="Sprite2D" parent="CanvasLayer/Panel"]
+[node name="Plant_5" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
 position = Vector2(243, 125)
 scale = Vector2(0.173017, 0.17266)
 script = ExtResource("7_uk8be")
 
-[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Panel/Plant_5"]
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_5"]
 visible = false
 offset_left = -574.197
 offset_top = 881.803
@@ -137,7 +152,7 @@ theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="newButton5" type="Button" parent="CanvasLayer/Panel/Plant_5"]
+[node name="newButton5" type="Button" parent="CanvasLayer/Menu/Panel/Plant_5"]
 visible = false
 offset_left = -43.0923
 offset_top = 466.345
@@ -147,7 +162,7 @@ theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Menu/Panel"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -163,7 +178,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.447059, 0.654902, 0.470588, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel/ColorRect"]
+[node name="Label" type="Label" parent="CanvasLayer/Menu/Panel/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -181,7 +196,60 @@ text = "Super Gedaan, alle planten
 zijn volgroeid!"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/Panel/Plant_2/newButton2" to="CanvasLayer/Panel" method="_on_new_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/Plant_3/newButton3" to="CanvasLayer/Panel" method="_on_new_button_3_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/Plant_4/newButton4" to="CanvasLayer/Panel" method="_on_new_button_4_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/Plant_5/newButton5" to="CanvasLayer/Panel" method="_on_new_button_5_pressed"]
+[node name="pause_button" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 2
+offset_left = 1061.0
+offset_top = 21.0
+offset_right = 1129.0
+offset_bottom = 53.0
+theme = ExtResource("6_uaiw7")
+text = "Pauze"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Menu"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8617, 16.12)
+color = Color(1, 1, 1, 0.490196)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -77.0
+offset_right = 237.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Hervat" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_uaiw7")
+text = "HERVAT"
+
+[node name="Instellingen" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_uaiw7")
+text = "INSTELLINGEN"
+
+[node name="Stop" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_uaiw7")
+text = "STOP"
+
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_2/newButton2" to="CanvasLayer/Menu/Panel" method="_on_new_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_3/newButton3" to="CanvasLayer/Menu/Panel" method="_on_new_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_4/newButton4" to="CanvasLayer/Menu/Panel" method="_on_new_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_5/newButton5" to="CanvasLayer/Menu/Panel" method="_on_new_button_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/pause_button" to="CanvasLayer/Menu" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/Hervat" to="CanvasLayer/Menu" method="_on_hervat_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/Instellingen" to="CanvasLayer/Menu" method="_on_instellingen_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/Stop" to="CanvasLayer/Menu" method="_on_stop_pressed"]
