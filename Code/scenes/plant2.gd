@@ -17,7 +17,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("ui_select"):
 			clickCount += 1
 			$plant_bar.value = toPercent(clickCount)
-			if clickCount >= Global.totalClick:
+			if clickCount == Global.totalClick:
 						$plant_bar.visible = false
 						Global.spaceCount += 1
 						Global.spaceDone = true
@@ -41,7 +41,7 @@ func _input(event):
 				$plant_bar.value = toPercent(clickCount)
 				print(toPercent(clickCount))
 				# check if the plant is fully grown
-				if clickCount >= Global.totalClick:
+				if clickCount == Global.totalClick:
 					$plant_bar.visible = false
 					Global.spaceCount += 1
 					Global.done = true

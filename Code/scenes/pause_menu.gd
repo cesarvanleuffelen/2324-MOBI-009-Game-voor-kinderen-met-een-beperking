@@ -23,7 +23,3 @@ func _on_verlaten_pressed():
 
 func _process(delta):
 	esc()
-
-
-func _on_button_pressed():
-	pause()

@@ -7,9 +7,18 @@ var b5:bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if !Global.background:
-		$TextureRect.visible = false
+	pass
+		
+
+func _reset():
+	Global.totalClick = 5.0
+	Global.done = false
+	Global.part = 1
+	Global.spaceDone = false
+	$ColorRect.visible = false
+	Global.spaceCount = 1
 	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,6 +47,7 @@ func _process(delta):
 	if Global.spaceCount > 5 :
 		$ColorRect.visible = true
 		await get_tree().create_timer(5).timeout
+		_reset()
 		get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
