@@ -32,6 +32,7 @@ func _on_hervat_pressed():
 	$MarginContainer2.visible = false
 	$Label.visible = false
 	$VBoxContainer.visible = false
+	print("dit is een test, haal dit later weg")
 
 
 func _on_stop_pressed():
