@@ -50,6 +50,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.1249, 1.08)
@@ -60,6 +61,7 @@ texture = ExtResource("1_i63f7")
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 286.0
 offset_top = 177.0
 offset_right = 870.0
@@ -70,6 +72,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4kk4o")
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 499.0
 offset_top = 378.0
 offset_right = 673.0
@@ -119,6 +122,7 @@ text = "Terug"
 script = ExtResource("4_x7eas")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 472.0
 offset_top = 191.0
 offset_right = 687.0
@@ -130,6 +134,7 @@ text = "Instellingen
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 271.0
 offset_right = 440.0
@@ -170,6 +175,7 @@ theme_override_fonts/font = ExtResource("2_bv8nn")
 text = "Muziek uitzetten"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 330.0
 offset_right = 532.0
@@ -183,6 +189,7 @@ text = "Volume
 "
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 504.0
 offset_top = 338.0
 offset_right = 718.0
