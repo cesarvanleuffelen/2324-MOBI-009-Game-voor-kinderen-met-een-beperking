@@ -17,8 +17,6 @@ func _reset():
 	Global.spaceDone = false
 	$ColorRect.visible = false
 	Global.spaceCount = 1
-	
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

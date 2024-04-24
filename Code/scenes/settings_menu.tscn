@@ -28,18 +28,18 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_n82f8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_408rm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txery"]
 bg_color = Color(0.45098, 0.654902, 0.470588, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4kql"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atgsw"]
 bg_color = Color(0.45098, 0.654902, 0.470588, 1)
 
 [sub_resource type="Theme" id="Theme_q51hn"]
 HSlider/icons/grabber = ExtResource("6_2oho3")
 HSlider/icons/grabber_disabled = ExtResource("7_wpk1h")
 HSlider/icons/grabber_highlight = ExtResource("6_2oho3")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_408rm")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_p4kql")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_txery")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_atgsw")
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
