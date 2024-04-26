@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bh4fabto4ymp8"]
+[gd_scene load_steps=34 format=3 uid="uid://bh4fabto4ymp8"]
 
 [ext_resource type="Texture2D" uid="uid://dmibg5akxdhgh" path="res://spel achtergrond.png" id="1_27g3s"]
 [ext_resource type="Script" path="res://scenes/LevelController.gd" id="1_ikhc5"]
@@ -11,10 +11,16 @@
 [ext_resource type="Script" path="res://scenes/plant5.gd" id="7_uk8be"]
 [ext_resource type="Script" path="res://scenes/Menu.gd" id="10_b3qhe"]
 [ext_resource type="Texture2D" uid="uid://3vk7uhs7ehg7" path="res://game achtergrond.png" id="11_f6edy"]
+[ext_resource type="Script" path="res://scenes/plant6.gd" id="11_mntmx"]
+[ext_resource type="Script" path="res://scenes/plant8.gd" id="12_3yjuc"]
+[ext_resource type="Script" path="res://scenes/plant7.gd" id="12_erha0"]
 [ext_resource type="FontFile" uid="uid://dg6oju3dlhjlo" path="res://Kadwa-Bold.ttf" id="12_xon5o"]
 [ext_resource type="Theme" uid="uid://c1byp8qt5rxne" path="res://knoplayout.tres" id="13_ufor8"]
+[ext_resource type="Script" path="res://scenes/plant9.gd" id="14_jvb2l"]
 [ext_resource type="Script" path="res://ModeCheckBox.gd" id="14_yeah5"]
+[ext_resource type="Script" path="res://scenes/plant10.gd" id="15_4ws82"]
 [ext_resource type="Script" path="res://MusicCheckBox.gd" id="15_r18js"]
+[ext_resource type="Script" path="res://scenes/plant11.gd" id="16_k833w"]
 [ext_resource type="Texture2D" uid="uid://ks0scfvouhyf" path="res://normalslider.png" id="16_oip24"]
 [ext_resource type="Texture2D" uid="uid://fo18y5oyr7n" path="res://normalslider2.png" id="17_f8mys"]
 [ext_resource type="Script" path="res://Master.gd" id="18_7qejn"]
@@ -95,17 +101,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 1.0
-offset_bottom = -2.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o1box")
 script = ExtResource("1_ikhc5")
 
 [node name="Plant_1" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
-position = Vector2(575, 304)
+position = Vector2(577, 302)
 scale = Vector2(0.169905, 0.169555)
 texture = ExtResource("1_oot4c")
 script = ExtResource("3_spp07")
@@ -120,32 +126,37 @@ step = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Plant_2" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
-position = Vector2(241, 354)
+position = Vector2(249, 353)
 scale = Vector2(0.112962, 0.112729)
 script = ExtResource("4_68xnf")
 
 [node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_2"]
 visible = false
-offset_left = -574.197
-offset_top = 881.803
-offset_right = 633.803
-offset_bottom = 1022.8
-theme_override_font_sizes/font_size = 80
+anchors_preset = -1
+anchor_left = 6.44531e-05
+anchor_top = -4.15039e-05
+anchor_right = 0.598064
+anchor_bottom = 0.03146
+offset_left = -911.876
+offset_top = 860.554
+offset_right = 296.124
+offset_bottom = 1001.55
+theme_override_font_sizes/font_size = 115
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="newButton2" type="Button" parent="CanvasLayer/Menu/Panel/Plant_2"]
 visible = false
-offset_left = -97.3779
-offset_top = 461.283
-offset_right = 140.622
-offset_bottom = 695.283
+offset_left = -152.0
+offset_top = 373.0
+offset_right = 140.0
+offset_bottom = 660.0
 theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 150
 text = "+"
 
 [node name="Plant_3" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
-position = Vector2(934.008, 137.099)
+position = Vector2(938, 137)
 scale = Vector2(0.156017, 0.155695)
 script = ExtResource("5_iu626")
 
@@ -161,10 +172,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="newButton3" type="Button" parent="CanvasLayer/Menu/Panel/Plant_3"]
 visible = false
-offset_left = -43.0923
-offset_top = 466.345
-offset_right = 103.908
-offset_bottom = 611.345
+offset_left = -89.7334
+offset_top = 404.637
+offset_right = 107.267
+offset_bottom = 598.637
 theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
@@ -176,20 +187,20 @@ script = ExtResource("6_eqga4")
 
 [node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_4"]
 visible = false
-offset_left = -574.197
-offset_top = 881.803
-offset_right = 633.803
-offset_bottom = 1022.8
+offset_left = -801.128
+offset_top = 875.207
+offset_right = 406.872
+offset_bottom = 1016.2
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="newButton4" type="Button" parent="CanvasLayer/Menu/Panel/Plant_4"]
 visible = false
-offset_left = -43.0923
-offset_top = 466.345
-offset_right = 103.908
-offset_bottom = 611.345
+offset_left = -126.494
+offset_top = 482.873
+offset_right = 56.506
+offset_bottom = 662.873
 theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
@@ -211,10 +222,160 @@ metadata/_edit_use_anchors_ = true
 
 [node name="newButton5" type="Button" parent="CanvasLayer/Menu/Panel/Plant_5"]
 visible = false
-offset_left = -43.0923
-offset_top = 466.345
-offset_right = 103.908
-offset_bottom = 611.345
+offset_left = -75.0
+offset_top = 454.417
+offset_right = 104.0
+offset_bottom = 631.417
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_6" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(338, 107)
+scale = Vector2(0.196794, 0.195983)
+script = ExtResource("11_mntmx")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_6"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton6" type="Button" parent="CanvasLayer/Menu/Panel/Plant_6"]
+visible = false
+offset_left = -35.5703
+offset_top = 489.838
+offset_right = 108.43
+offset_bottom = 631.838
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_7" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(832, 135)
+scale = Vector2(0.159341, 0.15803)
+script = ExtResource("12_erha0")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_7"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton7" type="Button" parent="CanvasLayer/Menu/Panel/Plant_7"]
+visible = false
+offset_left = -99.0
+offset_top = 411.0
+offset_right = 104.0
+offset_bottom = 611.0
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_8" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(163, 315)
+scale = Vector2(0.165329, 0.163968)
+script = ExtResource("12_3yjuc")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_8"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton8" type="Button" parent="CanvasLayer/Menu/Panel/Plant_8"]
+visible = false
+offset_left = -43.0
+offset_top = 508.691
+offset_right = 140.0
+offset_bottom = 688.691
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_9" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(1041, 127)
+scale = Vector2(0.16956, 0.167472)
+script = ExtResource("14_jvb2l")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_9"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton9" type="Button" parent="CanvasLayer/Menu/Panel/Plant_9"]
+visible = false
+offset_left = -100.26
+offset_top = 429.923
+offset_right = 89.7398
+offset_bottom = 616.923
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_10" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(352, 378)
+scale = Vector2(0.188462, 0.188462)
+script = ExtResource("15_4ws82")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_10"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton10" type="Button" parent="CanvasLayer/Menu/Panel/Plant_10"]
+visible = false
+offset_left = -117.0
+offset_top = 96.0
+offset_right = 62.0
+offset_bottom = 272.0
+theme = ExtResource("6_uaiw7")
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="Plant_11" type="Sprite2D" parent="CanvasLayer/Menu/Panel"]
+position = Vector2(147, 144)
+scale = Vector2(0.145461, 0.145462)
+script = ExtResource("16_k833w")
+
+[node name="plant_bar" type="ProgressBar" parent="CanvasLayer/Menu/Panel/Plant_11"]
+visible = false
+offset_left = -574.197
+offset_top = 881.803
+offset_right = 633.803
+offset_bottom = 1022.8
+theme_override_font_sizes/font_size = 80
+step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="newButton11" type="Button" parent="CanvasLayer/Menu/Panel/Plant_11"]
+visible = false
+offset_left = -43.0
+offset_top = 412.0
+offset_right = 159.0
+offset_bottom = 611.0
 theme = ExtResource("6_uaiw7")
 theme_override_font_sizes/font_size = 100
 text = "+"
@@ -350,6 +511,7 @@ offset_right = 41.0
 offset_bottom = 38.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_right = 1024.0
 offset_bottom = 600.0
 scale = Vector2(1.1249, 1.08)
@@ -360,6 +522,7 @@ texture = ExtResource("11_f6edy")
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 286.0
 offset_top = 177.0
 offset_right = 870.0
@@ -370,6 +533,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ext25")
 
 [node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 499.0
 offset_top = 378.0
 offset_right = 673.0
@@ -418,6 +582,7 @@ theme_override_fonts/font = ExtResource("12_xon5o")
 text = "Terug"
 
 [node name="Label" type="Label" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 472.0
 offset_top = 191.0
 offset_right = 687.0
@@ -429,6 +594,7 @@ text = "Instellingen
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 271.0
 offset_right = 440.0
@@ -469,6 +635,7 @@ theme_override_fonts/font = ExtResource("12_xon5o")
 text = "Muziek uitzetten"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 330.0
 offset_right = 532.0
@@ -482,6 +649,7 @@ text = "Volume
 "
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Menu/Settings"]
+layout_mode = 0
 offset_left = 504.0
 offset_top = 338.0
 offset_right = 718.0
@@ -501,6 +669,12 @@ bus_name = "music"
 [connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_3/newButton3" to="CanvasLayer/Menu/Panel" method="_on_new_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_4/newButton4" to="CanvasLayer/Menu/Panel" method="_on_new_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_5/newButton5" to="CanvasLayer/Menu/Panel" method="_on_new_button_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_6/newButton6" to="CanvasLayer/Menu/Panel" method="_on_new_button_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_7/newButton7" to="CanvasLayer/Menu/Panel" method="_on_new_button_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_8/newButton8" to="CanvasLayer/Menu/Panel" method="_on_new_button_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_9/newButton9" to="CanvasLayer/Menu/Panel" method="_on_new_button_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_10/newButton10" to="CanvasLayer/Menu/Panel" method="_on_new_button_10_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Panel/Plant_11/newButton11" to="CanvasLayer/Menu/Panel" method="_on_new_button_11_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/pause_button" to="CanvasLayer/Menu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/mute_button" to="CanvasLayer/Menu" method="_on_mute_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/Hervat" to="CanvasLayer/Menu" method="_on_hervat_pressed"]
