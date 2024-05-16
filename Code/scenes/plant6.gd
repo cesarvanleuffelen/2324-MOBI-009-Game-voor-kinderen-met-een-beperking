@@ -14,14 +14,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Global.part == 6:
-		if Input.is_action_just_pressed("ui_select"):
-			clickCount += 1
-			$plant_bar.value = toPercent(clickCount)
-			if clickCount == Global.totalClick:
-						$plant_bar.visible = false
-						Global.spaceDone = true
-						Global.spaceCount += 1
-						clickCount = 200.0
+		if Global.space_active:
+			if Input.is_action_just_pressed("ui_select"):
+				clickCount += 1
+				$plant_bar.value = toPercent(clickCount)
+				if clickCount == Global.totalClick:
+							$plant_bar.visible = false
+							Global.spaceDone = true
+							Global.spaceCount += 1
+							clickCount = 200.0
 	
 	if toPercent(clickCount) >= 10.0 && toPercent(clickCount) <= 30.0:
 		self.texture = ResourceLoader.load("res://planten/part6/fase_2.png")
@@ -34,15 +35,16 @@ func _process(delta):
 
 func _input(event):
 	#check for right mouse click event
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_rect().has_point(to_local(event.position)):
-				# add 1 to clickCount & change progress bar
-				clickCount += 1.0
-				$plant_bar.value = toPercent(clickCount)
-				print(toPercent(clickCount))
-				# check if the plant is fully grown
-				if clickCount == Global.totalClick:
-					$plant_bar.visible = false
-					Global.spaceCount += 1
-					Global.done = true
-					clickCount = 200.0
+	if Global.space_active == false:
+		if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+			if get_rect().has_point(to_local(event.position)):
+					# add 1 to clickCount & change progress bar
+					clickCount += 1.0
+					$plant_bar.value = toPercent(clickCount)
+					print(toPercent(clickCount))
+					# check if the plant is fully grown
+					if clickCount == Global.totalClick:
+						$plant_bar.visible = false
+						Global.spaceCount += 1
+						Global.done = true
+						clickCount = 200.0

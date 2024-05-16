@@ -7,3 +7,4 @@ var spaceDone: bool = false
 var spaceCount: int = 1
 var background: bool = true
 var mute: bool = false
+var space_active: bool = false

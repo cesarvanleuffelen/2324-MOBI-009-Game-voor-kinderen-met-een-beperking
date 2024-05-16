@@ -75,6 +75,7 @@ func _process(delta):
 	if Global.spaceCount > 11 :
 		$ColorRect.visible = true
 		await get_tree().create_timer(5).timeout
+		Global.space_active = false
 		_reset()
 		get_tree().change_scene_to_file("res://main_menu.tscn")
 
