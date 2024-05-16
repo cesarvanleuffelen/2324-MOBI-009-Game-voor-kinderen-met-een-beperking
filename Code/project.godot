@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Game"
+config/name="Grow More"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://grow more.png"
 Global="*res://global.gd"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
@@ -24,6 +25,7 @@ BgMusic="*res://bg_music.tscn"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
