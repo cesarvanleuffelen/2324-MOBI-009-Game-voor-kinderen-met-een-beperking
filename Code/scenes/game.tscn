@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bh4fabto4ymp8"]
+[gd_scene load_steps=19 format=3 uid="uid://bh4fabto4ymp8"]
 
 [ext_resource type="Texture2D" uid="uid://dmibg5akxdhgh" path="res://spel achtergrond.png" id="1_27g3s"]
 [ext_resource type="Script" path="res://scenes/LevelController.gd" id="1_ikhc5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scenes/plant2.gd" id="4_68xnf"]
 [ext_resource type="Script" path="res://scenes/plant3.gd" id="5_iu626"]
 [ext_resource type="Script" path="res://scenes/plant4.gd" id="6_eqga4"]
+[ext_resource type="Theme" uid="uid://btbohekxjs6yj" path="res://progress_bar.tres" id="6_n353e"]
 [ext_resource type="Theme" uid="uid://dte0vp6u0qo8g" path="res://greenbutton.tres" id="6_uaiw7"]
 [ext_resource type="Script" path="res://scenes/plant5.gd" id="7_uk8be"]
 [ext_resource type="Script" path="res://scenes/Menu.gd" id="10_b3qhe"]
@@ -70,6 +71,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -90,6 +92,7 @@ offset_left = -911.876
 offset_top = 860.554
 offset_right = 296.124
 offset_bottom = 1001.55
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 115
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -115,6 +118,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -140,6 +144,7 @@ offset_left = -801.128
 offset_top = 875.207
 offset_right = 406.872
 offset_bottom = 1016.2
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -165,6 +170,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -190,6 +196,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -215,6 +222,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -240,6 +248,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -265,6 +274,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -290,6 +300,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true
@@ -315,6 +326,7 @@ offset_left = -574.197
 offset_top = 881.803
 offset_right = 633.803
 offset_bottom = 1022.8
+theme = ExtResource("6_n353e")
 theme_override_font_sizes/font_size = 80
 step = 1.0
 metadata/_edit_use_anchors_ = true

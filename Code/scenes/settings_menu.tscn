@@ -144,6 +144,7 @@ offset_bottom = 295.0
 layout_mode = 2
 theme = SubResource("Theme_eio6f")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
 script = ExtResource("5_84u6p")
 
 [node name="Label2" type="Label" parent="HBoxContainer/ModeCheckBox"]
@@ -154,7 +155,7 @@ offset_right = 211.0
 offset_bottom = 33.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Achtergrond uitzetten"
+text = "Achtergrond "
 
 [node name="MusicChecBox" type="CheckBox" parent="HBoxContainer/ModeCheckBox"]
 layout_mode = 2
@@ -162,6 +163,7 @@ offset_top = 24.0
 offset_right = 24.0
 offset_bottom = 48.0
 theme = SubResource("Theme_n82f8")
+button_pressed = true
 script = ExtResource("5_rm0b6")
 
 [node name="Label" type="Label" parent="HBoxContainer/ModeCheckBox"]
@@ -172,7 +174,7 @@ offset_right = 174.0
 offset_bottom = 55.0
 theme_override_colors/font_color = Color(0.141176, 0.215686, 0.14902, 1)
 theme_override_fonts/font = ExtResource("4_xivv3")
-text = "Muziek uitzetten"
+text = "Muziek"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -206,5 +208,5 @@ script = ExtResource("5_cp2ft")
 bus_name = "music"
 
 [connection signal="pressed" from="MarginContainer3/VBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="toggled" from="HBoxContainer/ModeCheckBox" to="HBoxContainer/ModeCheckBox" method="_on_toggled"]
-[connection signal="toggled" from="HBoxContainer/ModeCheckBox/MusicChecBox" to="HBoxContainer/ModeCheckBox/MusicChecBox" method="_on_toggled"]
+[connection signal="pressed" from="HBoxContainer/ModeCheckBox" to="HBoxContainer/ModeCheckBox" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/ModeCheckBox/MusicChecBox" to="HBoxContainer/ModeCheckBox/MusicChecBox" method="_on_pressed"]
